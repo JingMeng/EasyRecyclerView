@@ -1,8 +1,8 @@
-package com.jude.dome.viewholder;
+﻿package com.jude.dome.viewholder;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -40,3 +40,4 @@ public class AdViewHolder extends BaseViewHolder<Ad> {
     }
 
 }
+

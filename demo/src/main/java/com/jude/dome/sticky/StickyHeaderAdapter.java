@@ -1,9 +1,9 @@
-
+﻿
 
 package com.jude.dome.sticky;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +13,8 @@ import com.jude.dome.R;
 import com.jude.easyrecyclerview.decoration.StickyHeaderDecoration;
 
 /**
- * 当前类注释：悬浮headerAdapter
- * PackageName：com.jude.dome.sticky
+ * 褰撳墠绫绘敞閲婏細鎮诞headerAdapter
+ * PackageName锛歝om.jude.dome.sticky
  * Created by Qyang on 16/11/4
  * Email: yczx27@163.com
  */
@@ -39,7 +39,7 @@ public class StickyHeaderAdapter implements StickyHeaderDecoration.IStickyHeader
 
     @Override
     public void onBindHeaderViewHolder(HeaderHolder viewholder, int position) {
-        viewholder.header.setText("第"+getHeaderId(position)+"组");
+        viewholder.header.setText("绗?+getHeaderId(position)+"缁?);
     }
 
     class HeaderHolder extends RecyclerView.ViewHolder {
@@ -51,3 +51,4 @@ public class StickyHeaderAdapter implements StickyHeaderDecoration.IStickyHeader
         }
     }
 }
+

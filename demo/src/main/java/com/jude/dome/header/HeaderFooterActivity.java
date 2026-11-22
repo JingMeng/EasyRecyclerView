@@ -1,12 +1,12 @@
-package com.jude.dome.header;
+﻿package com.jude.dome.header;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -78,7 +78,7 @@ public class HeaderFooterActivity extends AppCompatActivity {
             @Override
             public View onCreateView(ViewGroup parent) {
                 RecyclerView recyclerView = new RecyclerView(parent.getContext()){
-                    //为了不打扰横向RecyclerView的滑动操作，可以这样处理
+                    //涓轰簡涓嶆墦鎵版í鍚慠ecyclerView鐨勬粦鍔ㄦ搷浣滐紝鍙互杩欐牱澶勭悊
                     @Override
                     public boolean onTouchEvent(MotionEvent event) {
                         super.onTouchEvent(event);
@@ -107,7 +107,7 @@ public class HeaderFooterActivity extends AppCompatActivity {
 
             @Override
             public void onBindView(View headerView) {
-                //这里的处理别忘了
+                //杩欓噷鐨勫鐞嗗埆蹇樹簡
                 ((ViewGroup)headerView).requestDisallowInterceptTouchEvent(true);
             }
         });
@@ -118,7 +118,7 @@ public class HeaderFooterActivity extends AppCompatActivity {
                 tv.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) Utils.convertDpToPixel(56,HeaderFooterActivity.this)));
                 tv.setGravity(Gravity.CENTER);
                 tv.setTextSize(TypedValue.COMPLEX_UNIT_SP,16);
-                tv.setText("(-_-)/~~~死宅真是恶心");
+                tv.setText("(-_-)/~~~姝诲畢鐪熸槸鎭跺績");
                 return tv;
             }
 
@@ -132,3 +132,4 @@ public class HeaderFooterActivity extends AppCompatActivity {
 
 
 }
+

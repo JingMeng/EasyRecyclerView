@@ -1,11 +1,11 @@
-package com.jude.dome.loadmore;
+﻿package com.jude.dome.loadmore;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -85,14 +85,14 @@ public class RefreshAndMoreActivity extends AppCompatActivity implements Recycle
         onRefresh();
     }
 
-    //第四页会返回空,意为数据加载结束
+    //绗洓椤典細杩斿洖绌?鎰忎负鏁版嵁鍔犺浇缁撴潫
     @Override
     public void onLoadMore() {
         Log.i("EasyRecyclerView","onLoadMore");
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                //刷新
+                //鍒锋柊
                 if (!hasNetWork) {
                     adapter.pauseMore();
                     return;
@@ -110,7 +110,7 @@ public class RefreshAndMoreActivity extends AppCompatActivity implements Recycle
             @Override
             public void run() {
                 adapter.clear();
-                //刷新
+                //鍒锋柊
                 if (!hasNetWork) {
                     adapter.pauseMore();
                     return;
@@ -128,7 +128,7 @@ public class RefreshAndMoreActivity extends AppCompatActivity implements Recycle
         MenuItem item = menu.findItem(R.id.checkbox);
         CheckBox box = (CheckBox) item.getActionView();
         box.setChecked(true);
-        box.setText("网络");
+        box.setText("缃戠粶");
         box.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -140,3 +140,4 @@ public class RefreshAndMoreActivity extends AppCompatActivity implements Recycle
 
 
 }
+
